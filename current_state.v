@@ -23,8 +23,8 @@
 module current_state(
     input wire clk,
     input wire reset_n,
-    input wire [3:0] next_state,
-    output wire [3:0] current_state
+    input wire [2:0] next_state,
+    output wire [2:0] current_state
     );
     
     flipflop f0(
@@ -48,12 +48,6 @@ module current_state(
     .q(current_state[2])
     );
     
-    flipflop f3(
-    .clk(clk), 
-    .reset_n(reset_n), 
-    .d(next_state[3]),
-    .q(current_state[3])
-    );
     
     
 endmodule
