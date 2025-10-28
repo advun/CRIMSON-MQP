@@ -30,7 +30,7 @@ module flipflop(
     
     always @ (posedge clk) begin
     
-        if (reset_n) begin
+        if (!reset_n) begin
             out = 0;
         end
     
