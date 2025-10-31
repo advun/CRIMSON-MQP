@@ -22,7 +22,7 @@
 
 module registers(
 input clk,
-input rst_n,
+input reset_n,
 input bit,
 input [7:0] ADC,
 output [79:0] out
@@ -30,7 +30,7 @@ output [79:0] out
     
     ADCregs ADC0 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[0]),
     .clk(clk),
     .out(out[9:0])
@@ -38,7 +38,7 @@ output [79:0] out
     
     ADCregs ADC1 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[1]),
     .clk(clk),
     .out(out[19:10])
@@ -46,7 +46,7 @@ output [79:0] out
     
     ADCregs ADC2 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[2]),
     .clk(clk),
     .out(out[29:20])
@@ -54,7 +54,7 @@ output [79:0] out
     
     ADCregs ADC3 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[3]),
     .clk(clk),
     .out(out[39:30])
@@ -62,7 +62,7 @@ output [79:0] out
     
     ADCregs ADC4 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[4]),
     .clk(clk),
     .out(out[49:40])
@@ -70,7 +70,7 @@ output [79:0] out
     
     ADCregs ADC5 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[5]),
     .clk(clk),
     .out(out[59:50])
@@ -78,7 +78,7 @@ output [79:0] out
     
     ADCregs ADC6 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[6]),
     .clk(clk),
     .out(out[69:60])
@@ -86,7 +86,7 @@ output [79:0] out
     
     ADCregs ADC7 (
     .in(bit),
-    .reset_n(rst_n),
+    .reset_n(reset_n),
     .enable(ADC[7]),
     .clk(clk),
     .out(out[79:70])

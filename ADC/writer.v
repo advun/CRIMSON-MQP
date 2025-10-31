@@ -22,8 +22,8 @@
 
 module writer(
     input clk,
-    input rst_n,
-    input [7:0] ADC,  //which ADC is being used
+    input reset_n,
+    input [7:0] ADCctrl,  //which ADC is being used
     input [9:0] D,  //bits from SAR ADC
     input [9:0] bitctrl, //which bit 
     output [79:0] out //ADC0 = 0-9, ADC1 = 10-19, etc
@@ -40,9 +40,9 @@ module writer(
  
     registers dut (
     .clk(clk),
-    .rst_n(rst_n),
+    .reset_n(reset_n),
     .bit(correct_bit),
-    .ADC(ADC),
+    .ADC(ADCctrl),
     .out(out)   
     );
     

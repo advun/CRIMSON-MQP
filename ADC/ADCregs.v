@@ -28,7 +28,7 @@ module ADCregs(
     output [9:0] out
     );
     
-    flipflop r0 (
+    eflipflop r0 (
     .in(in),
     .reset_n(reset_n),
     .enable(enable),
@@ -36,7 +36,7 @@ module ADCregs(
     .out(out[0])
     );
     
-    flipflop r1 (
+    eflipflop r1 (
     .in(out[0]),
     .reset_n(reset_n),
     .enable(enable),
@@ -44,7 +44,7 @@ module ADCregs(
     .out(out[1])
     );
     
-    flipflop r2 (
+    eflipflop r2 (
     .in(out[1]),
     .reset_n(reset_n),
     .enable(enable),
@@ -52,7 +52,7 @@ module ADCregs(
     .out(out[2])
     );
     
-    flipflop r3 (
+    eflipflop r3 (
     .in(out[2]),
     .reset_n(reset_n),
     .enable(enable),
@@ -60,7 +60,7 @@ module ADCregs(
     .out(out[3])
     );
     
-    flipflop r4 (
+    eflipflop r4 (
     .in(out[3]),
     .reset_n(reset_n),
     .enable(enable),
@@ -68,7 +68,7 @@ module ADCregs(
     .out(out[4])
     );
     
-    flipflop r5 (
+    eflipflop r5 (
     .in(out[4]),
     .reset_n(reset_n),
     .enable(enable),
@@ -76,7 +76,7 @@ module ADCregs(
     .out(out[5])
     );
     
-    flipflop r6 (
+    eflipflop r6 (
     .in(out[5]),
     .reset_n(reset_n),
     .enable(enable),
@@ -84,7 +84,7 @@ module ADCregs(
     .out(out[6])
     );
     
-    flipflop r7 (
+    eflipflop r7 (
     .in(out[6]),
     .reset_n(reset_n),
     .enable(enable),
@@ -92,7 +92,7 @@ module ADCregs(
     .out(out[7])
     );
     
-    flipflop r8 (
+    eflipflop r8 (
     .in(out[7]),
     .reset_n(reset_n),
     .enable(enable),
@@ -100,7 +100,7 @@ module ADCregs(
     .out(out[8])
     );
     
-    flipflop r9 (
+    eflipflop r9 (
     .in(out[8]),
     .reset_n(reset_n),
     .enable(enable),
