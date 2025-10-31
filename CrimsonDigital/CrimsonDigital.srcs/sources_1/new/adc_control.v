@@ -39,7 +39,7 @@ module adc_control(
    wire nq1 = ~q1;
    wire nq2 = ~q2;
    
-   //depending on ADCstate, programmer can decide at which ADC it resets to 0.  
+   //depending on ADCstate, programmer can decide at which ADC it resets to 0 at.  
    assign control = ~(((nq0&q1&nq2)& ~ADCstate[1]& ADCstate[0]) | ((nq0&nq1&q2)& ADCstate[1]& ~ADCstate[0]) | ((nq0&q1&q2)& ADCstate[1]& ADCstate[0]));
    
    assign d0 = (~q0) & control;
