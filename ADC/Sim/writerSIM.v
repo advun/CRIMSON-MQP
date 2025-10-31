@@ -34,8 +34,8 @@ module writerSIM(
     
     writer dut (
     .clk(clk),
-    .rst_n(rst_n),
-    .ADC(ADC),
+    .reset_n(rst_n),
+    .ADCctrl(ADC),
     .D(D),
     .bitctrl(bitctrl),
     .out(out)
