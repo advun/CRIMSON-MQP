@@ -1,0 +1,11 @@
+0.7
+2020.2
+Jun 10 2021
+20:04:57
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.sim/sim_1/behav/xsim/glbl.v,1623370582,verilog,,,,glbl,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sim_1/new/writerSIM.v,1761944615,verilog,,,,writerSIM,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/ADCregs.v,1761944412,verilog,,C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/Mux10to1.v,,ADCregs,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/Mux10to1.v,1761944321,verilog,,C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/eflipflop.v,,Mux10to1,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/eflipflop.v,1761944454,verilog,,C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/registers.v,,eflipflop,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/registers.v,1761944360,verilog,,C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/writer.v,,registers,,,,,,,,
+C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sources_1/new/writer.v,1761944288,verilog,,C:/Users/cwilding/CrimsonDigital/CrimsonDigital.srcs/sim_1/new/writerSIM.v,,writer,,,,,,,,

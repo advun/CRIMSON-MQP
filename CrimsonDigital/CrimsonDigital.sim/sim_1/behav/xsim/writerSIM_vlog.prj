@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../CrimsonDigital.srcs/sources_1/new/ADCregs.v" \
+"../../../../CrimsonDigital.srcs/sources_1/new/Mux10to1.v" \
+"../../../../CrimsonDigital.srcs/sources_1/new/eflipflop.v" \
+"../../../../CrimsonDigital.srcs/sources_1/new/registers.v" \
+"../../../../CrimsonDigital.srcs/sources_1/new/writer.v" \
+"../../../../CrimsonDigital.srcs/sim_1/new/writerSIM.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
