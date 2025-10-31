@@ -8,7 +8,7 @@
 // Project Name: CRIMSON
 // Description: 
 // Every 12 clock cycles, send a start pulse to the SAR ADC 
-// Every 12 clock cycles, switch which ADC is being read to
+// Every 12 clock cycles, switch which ADC is being read to (programmably)
 // Dependencies: 
 // 
 // Revision:
