@@ -23,7 +23,7 @@
 module ADC(
     input clk,
     input reset_n,
-    input [2:0] ADCstate,
+    input [1:0] ADCstate,
     output [79:0] out
     );
     

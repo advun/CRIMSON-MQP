@@ -20,7 +20,7 @@
 
 module adc_control(
     input clk,
-    input [2:0] ADCstate, //decided by overarching state machine
+    input [1:0] ADCstate, //decided by overarching state machine
     input reset_n,
     output [7:0] ADCctrl,
     output start
@@ -33,9 +33,44 @@ module adc_control(
     .out(start)
     );
     
+   wire control;
+   wire q0, q1, q2;
+   wire nq0 = ~q0;
+   wire nq1 = ~q1;
+   wire nq2 = ~q2;
+   
+   //depending on ADCstate, programmer can decide at which ADC it resets to 0.  
+   assign control = ~(((nq0&q1&nq2)& ~ADCstate[1]& ADCstate[0]) | ((nq0&nq1&q2)& ADCstate[1]& ~ADCstate[0]) | ((nq0&q1&q2)& ADCstate[1]& ADCstate[0]));
+   
+   assign d0 = (~q0) & control;
+   assign d1 = (q1 ^ q0) & control;
+   assign d2 = (q2 ^ (q1 & q0)) & control;
+   
+   flipflop f0(.clk(start), .reset_n(reset_n), .d(d0), .q(q0));
+   flipflop f1(.clk(start), .reset_n(reset_n), .d(d1), .q(q1));
+   flipflop f2(.clk(start), .reset_n(reset_n), .d(d2), .q(q2));
+   
+   assign ADCctrl[0] = nq0 & nq1 & nq2;
+   assign ADCctrl[1] = q0 & nq1 & nq2;
+   assign ADCctrl[2] = nq0 & q1 & nq2;
+   assign ADCctrl[3] = q0 & q1 & nq2;
+   assign ADCctrl[4] = nq0 & nq1 & q2;
+   assign ADCctrl[5] = q0 & nq1 & q2;
+   assign ADCctrl[6] = nq0 & q1 & q2;
+   assign ADCctrl[7] = q0 & q1 & q2;
+   
+   
+   
+   
+   
+    //Normal Operation (00)
+   
     
     
+    ///Program 1 (01)
     
+    ///Program 2 (10)
     
+    ///Program 3 (11)
     
 endmodule

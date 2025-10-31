@@ -45,12 +45,14 @@ module FSMSIM(
         .clockspeed(clockspeed)
     );
     
-    initial clk = 0;
-    always #5 clk = ~clk;
+    initial begin
+    forever #5 clk = ~clk;
+    end
     
     initial begin
         // Initialize inputs
         solar_on = 0;
+        clk = 0;
         always_on = 0;
         low_power = 0;
         adc_enable = 0;
