@@ -28,8 +28,8 @@ module FSM(
     output wire [6:0] control
     );
 
-    wire [3:0] current_state;
-    wire [3:0] next_state;
+    wire [2:0] current_state;
+    wire [2:0] next_state;
 
     next_state t1 (
         .blocks(blocks),
