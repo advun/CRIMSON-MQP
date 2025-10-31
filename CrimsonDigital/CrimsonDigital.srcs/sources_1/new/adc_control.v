@@ -58,19 +58,5 @@ module adc_control(
    assign ADCctrl[5] = q0 & nq1 & q2;
    assign ADCctrl[6] = nq0 & q1 & q2;
    assign ADCctrl[7] = q0 & q1 & q2;
-   
-   
-   
-   
-   
-    //Normal Operation (00)
-   
-    
-    
-    ///Program 1 (01)
-    
-    ///Program 2 (10)
-    
-    ///Program 3 (11)
-    
+
 endmodule
