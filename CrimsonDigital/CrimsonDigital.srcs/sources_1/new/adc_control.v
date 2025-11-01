@@ -8,7 +8,7 @@
 // Project Name: CRIMSON
 // Description: 
 // Every 12 clock cycles, send a start pulse to the SAR ADC 
-// Every 12 clock cycles, switch which ADC is being read to (programmably)
+// Every 12 clock cycles, switch which ADC is being read to
 // Dependencies: 
 // 
 // Revision:
@@ -39,7 +39,7 @@ module adc_control(
    wire nq1 = ~q1;
    wire nq2 = ~q2;
    
-   //depending on ADCstate, programmer can decide at which ADC it resets to 0 at.  
+   //depending on ADCstate, programmer can decide at which ADC it resets to 0.  
    assign control = ~(((nq0&q1&nq2)& ~ADCstate[1]& ADCstate[0]) | ((nq0&nq1&q2)& ADCstate[1]& ~ADCstate[0]) | ((nq0&q1&q2)& ADCstate[1]& ADCstate[0]));
    
    assign d0 = (~q0) & control;
@@ -58,5 +58,5 @@ module adc_control(
    assign ADCctrl[5] = q0 & nq1 & q2;
    assign ADCctrl[6] = nq0 & q1 & q2;
    assign ADCctrl[7] = q0 & q1 & q2;
-
+    
 endmodule
