@@ -29,8 +29,8 @@ module counter12(
     wire q0, q1, q2, q3;
     wire reset;
 
-    // resets at 1100 (12)
-    assign reset = q3 & q2 & ~q1 & ~q0;
+    // resets at 1011 (11)
+    assign reset = q3 & ~q2 & q1 & q0;
 
     wire d0, d1, d2, d3;
 

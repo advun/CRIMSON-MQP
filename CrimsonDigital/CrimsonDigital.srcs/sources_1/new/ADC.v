@@ -23,14 +23,16 @@
 module ADC(
     input clk,
     input reset_n,
+    input [9:0] D,
+    input [9:0] bitctrl,
     input [1:0] ADCstate,
     output [79:0] out
     );
     
     wire [7:0] ADCctrl;  //which ADC is active
     wire start; //start bit to begin reading
-    wire [9:0] D; //bit from SAR ADC
-    wire [9:0] bitctrl; //which bit is being read
+    //wire [9:0] D; //bit from SAR ADC
+    //wire [9:0] bitctrl; //which bit is being read
     
     adc_control ctrl (
     .clk(clk),
@@ -40,13 +42,13 @@ module ADC(
     .start(start)
     );
     
-    SARADC test (
+ /*   SARADC test (
     .clk(clk),
     .start(start),
     .reset_n(reset_n),
     .D(D),
     .bitctrl(bitctrl)
-    );
+    );*/
     
     writer save (
     .clk(clk),

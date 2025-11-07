@@ -45,10 +45,11 @@ module adc_control(
    assign d0 = (~q0) & control;
    assign d1 = (q1 ^ q0) & control;
    assign d2 = (q2 ^ (q1 & q0)) & control;
+
    
-   flipflop f0(.clk(start), .reset_n(reset_n), .d(d0), .q(q0));
-   flipflop f1(.clk(start), .reset_n(reset_n), .d(d1), .q(q1));
-   flipflop f2(.clk(start), .reset_n(reset_n), .d(d2), .q(q2));
+    flipflop f0(.clk(clk), .reset_n(reset_n), .d(start ? d0 : q0), .q(q0));
+    flipflop f1(.clk(clk), .reset_n(reset_n), .d(start ? d1 : q1), .q(q1));
+    flipflop f2(.clk(clk), .reset_n(reset_n), .d(start ? d2 : q2), .q(q2));
    
    assign ADCctrl[0] = nq0 & nq1 & nq2;
    assign ADCctrl[1] = q0 & nq1 & nq2;
